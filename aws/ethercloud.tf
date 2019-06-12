@@ -23,3 +23,7 @@ resource "aws_s3_bucket" "ethercloud_bucket" {
     bucket = "ethercloud-bucket-name"
     acl = "private"
 }
+
+output "ip" {
+    value = aws_eip.ip.public_ip
+}
